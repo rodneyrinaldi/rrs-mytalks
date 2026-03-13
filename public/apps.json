@@ -1,0 +1,73 @@
+[
+  {
+    "name": "mylinks",
+    "title": "Mylinks RRS",
+    "link": "https://mylinks.rrs.net.br"
+  },
+  {
+    "name": "rodneyrinaldi",
+    "title": "R2 Page",
+    "link": "https://rodneyrinaldi.com.br"
+  },
+  {
+    "name": "rodneyrinaldiadvogado",
+    "title": "R2 Advogado",
+    "link": "https://advogado.rodneyrinaldi.com.br"
+  },
+  {
+    "name": "rodneyrinaldiinventario",
+    "title": "R2 Inventário",
+    "link": "https://inventario.rodneyrinaldi.com.br"
+  },  
+  {
+    "name": "auxiliomaternidade",
+    "title": "R2 Auxilio Maternidade",
+    "link": "https://auxiliomaternidade.rodneyrinaldi.com.br/"
+  },
+  {
+    "name": "rodneyrinaldidev",
+    "title": "R2 DEV",
+    "link": "https://dev.rodneyrinaldi.com.br"
+  },  
+  {
+    "name": "servicos",
+    "title": "Serviços ADV",
+    "link": "https://servicos.adv.br"
+  },
+  {
+    "name": "feepilot",
+    "title": "Fee Pilot OAB",
+    "link": "https://servicos.adv.br/feepilot"
+  },
+  {
+    "name": "feepilot guia",
+    "title": "Fee Pilot OAB Guia",
+    "link": "https://servicos.adv.br/feepilot/guia"
+  },
+  {
+    "name": "feepilot demo",
+    "title": "Fee Pilot OAB Demo",
+    "link": "https://servicos.adv.br/feepilot/demo"
+  },
+  {
+    "name": "taskpilot",
+    "title": "Task Pilot OAB",
+    "link": "https://servicos.adv.br/taskpilot"
+  },
+  {
+    "name": "taskpilot guia",
+    "title": "Task Pilot OAB Guia",
+    "link": "https://servicos.adv.br/taskpilot/guia"
+  },
+  {
+    "name": "taskilot demo",
+    "title": "Task Pilot OAB Demo",
+    "link": "https://servicos.adv.br/taskpilot/demo"
+  },
+  {
+    "name": "julgados",
+    "title": "Julagos IA",
+    "link": "https://www.julgados.ia.br"
+  }
+
+]

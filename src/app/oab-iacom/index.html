@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rraas services</title>
+    <style>
+        body {
+            position: relative;
+            margin: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .message {
+            position: absolute;
+            background-color: black;
+            padding: 10px 15px;
+            border: solid 1px #0a9204;
+            font-size: 1.5em;
+            text-align: center;
+            color: #ffffff;
+            display: none; 
+        }
+    </style>
+</head>
+<body onload="initMatrixEffect()">
+    <canvas id="q"></canvas>
+    <div id="displayMessage" class="message"></div>
+
+    <script>
+        function initMatrixEffect() {
+            const canvas = document.getElementById('q');
+            const ctx = canvas.getContext('2d');
+            let width = canvas.width = window.innerWidth;
+            let height = canvas.height = window.innerHeight;
+
+            const columns = Math.floor(width / 10);
+            const drops = Array(columns).fill(1);
+
+            const frases = [
+                "TOC TOC, ACORDE ADVOGADO", 
+                "O CODIGO ESTÁ EM TUDO", 
+                "RAG BUSCANDO A VERDADE NA FONTE",
+                "FINE-TUNING REPROGRAMANDO A MENTE", 
+                "CONTEXTS A COLHER NAO EXISTE", 
+                "PROMPTS AS IDEIAS SÃO A CHAVE", 
+                "A IA ESCOLHEU A PILULA AZUL?", 
+                "CICLO SE REINICIA NA MATRIX" 
+            ];
+            
+            const msgElement = document.getElementById('displayMessage');
+            let currentIndex = 0;
+
+            function showNextMessage() {
+                msgElement.innerText = frases[currentIndex];
+                msgElement.style.display = 'block';
+
+                setTimeout(() => {
+                    msgElement.style.display = 'none';
+                    currentIndex = (currentIndex + 1) % frases.length;
+                    
+                    setTimeout(showNextMessage, 2000);
+                }, 4000);
+            }
+
+            // Atraso inicial de 4 segundos antes de começar a primeira frase
+            setTimeout(showNextMessage, 4000);
+
+            function draw() {
+                ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+                ctx.fillRect(0, 0, width, height);
+
+                ctx.fillStyle = '#0F0';
+                ctx.font = '10px Arial';
+
+                drops.forEach((y, x) => {
+                    const text = String.fromCharCode(0x30A0 + Math.random() * 96);
+                    ctx.fillText(text, x * 10, y * 10);
+
+                    if (y * 10 > height && Math.random() > 0.975) {
+                        drops[x] = 0;
+                    }
+                    drops[x]++;
+                });
+            }
+
+            function resizeCanvas() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+                const columns = Math.floor(width / 10);
+                drops.length = columns;
+                drops.fill(1);
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            setInterval(draw, 33);
+        }
+    </script>
+</body>
+</html>
