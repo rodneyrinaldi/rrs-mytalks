@@ -71,12 +71,12 @@ const MatrixEffect = () => {
 
     const frases = [
       "acorde advogado",       
-      "o código está em tudo",
+      "código está em tudo",
       "buscando a verdade na fonte: rag",
       "reprogramando o conhecimento: fine-tuning",
-      "a colher não exite: contexts",
-      "as chaves são as ideias: prompts",      
-      "a pilula vermelha: ai power and knowledge",
+      "colher não existe: contexts",
+      "chaves são as ideias: prompts",      
+      "pilula vermelha: ai power and knowledge",
       "ciclo reiniciando: new zion of law",
     ];
 
